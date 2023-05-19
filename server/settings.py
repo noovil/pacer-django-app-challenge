@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-ns!zi58qyrira=yzd5e943au9=1)b!ay_9d4ub3i7^kp8!2g9o
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+CSRF_TRUSTED_ORIGINS = ['https://ihfiam3ch6.us-east-2.awsapprunner.com']
 CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
