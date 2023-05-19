@@ -36,8 +36,8 @@ jobs:
             # the docker image, and pushing it to ECR.
               env:
                 ECR_REGISTRY: ${{ secrets.ECR_REGISTRY }}
-                ECR_REPOSITORY: test-ecr-repo
+                ECR_REPOSITORY: test1-ecr-repo
                 IMAGE_TAG: pacer-django-app
               run: |
-                docker build -t public.ecr.aws/$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-                docker push public.ecr.aws/$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+                docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+                docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
