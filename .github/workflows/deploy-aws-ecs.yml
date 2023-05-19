@@ -35,7 +35,7 @@ jobs:
             # copying the code from repo i.e. Dockerfile, versioning 
             # the docker image, and pushing it to ECR.
               env:
-                ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+                ECR_REGISTRY: ${{ secrets.ECR_REGISTRY }}
                 ECR_REPOSITORY: test-ecr-repo
                 IMAGE_TAG: pacer-django-app
               run: |
